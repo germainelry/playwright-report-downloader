@@ -1,23 +1,23 @@
 @echo off
 echo ============================================================
-echo  Portal Report Downloader
+echo  Portal - Re-authentication
 echo ============================================================
 echo.
 
-:: Check venv exists — remind user to run setup first
+:: Check venv exists
 if not exist ".venv" (
     echo ERROR: Virtual environment not found.
-    echo Please run setup.bat first before using this script.
+    echo Please run run_setup.bat first before using this script.
     pause
     exit /b 1
 )
 
 :: Activate venv and run
 call .venv\Scripts\activate.bat
-python report_downloader.py %*
+python authenticate.py
 
 echo.
 echo ============================================================
-echo  Run complete. Press any key to close.
+echo  Re-authentication complete. Press any key to close.
 echo ============================================================
 pause

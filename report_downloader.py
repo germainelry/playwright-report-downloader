@@ -1,5 +1,5 @@
 """
-Enterprise Portal Report Downloader.
+Playwright Report Downloader.
 
 Downloads reports for every configured entity from a web-based reporting
 portal, saves them locally organised by date, writes a per-run CSV audit
@@ -33,7 +33,7 @@ import portal_selectors as sel
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Enterprise Portal Report Downloader",
+        description="Playwright Report Downloader",
     )
     group = parser.add_mutually_exclusive_group()
     group.add_argument(

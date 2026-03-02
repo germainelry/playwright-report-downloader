@@ -1,4 +1,4 @@
-# Enterprise Portal Report Downloader (Playwright + Python)
+# Playwright Report Downloader
 
 A production-grade browser automation template that downloads reports from a
 web-based enterprise portal, handles session persistence and MFA handoff,
@@ -13,7 +13,7 @@ a downstream pickup folder — all driven by Playwright and plain Python.
   across runs; detect expiry and MFA prompts automatically.
 - **MFA / OTP reauth workflow** — a dedicated `authenticate.py` script lets an
   operator complete MFA interactively, then saves the session for unattended use.
-- **Robust selector strategy** — all selectors live in `selectors.py`, clearly
+- **Robust selector strategy** — all selectors live in `portal_selectors.py`, clearly
   marked as examples to customise, with role/label preferred over fragile CSS.
 - **Retry logic for flaky menus** — configurable retry loop for context menus
   that are slow to render.
@@ -33,7 +33,7 @@ a downstream pickup folder — all driven by Playwright and plain Python.
 ## Project structure
 
 ```
-enterprise-portal-downloader/
+playwright-report-downloader/
 ├── report_downloader.py    # Main script — downloads reports for all entities
 ├── authenticate.py         # Interactive session capture (MFA-safe)
 ├── config.py               # All configuration in one place
@@ -41,6 +41,11 @@ enterprise-portal-downloader/
 ├── requirements.txt        # Python dependencies
 ├── .env.example            # Template for credentials
 ├── SECURITY.md             # What must never be committed
+├── LICENSE                 # MIT License
+│
+├── run_setup.bat           # Windows: first-time setup (venv + deps + browser)
+├── run_downloader.bat      # Windows: run the downloader
+├── run_authenticate.bat    # Windows: re-authenticate session
 │
 ├── auth_state/             # Saved browser session (git-ignored)
 ├── logs/                   # Per-run log files (git-ignored)

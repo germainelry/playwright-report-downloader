@@ -29,7 +29,11 @@ call .venv\Scripts\activate.bat
 pip install -r requirements.txt
 
 echo.
+echo Installing Chromium browser for Playwright...
+playwright install chromium
+
+echo.
 echo ============================================================
-echo  Setup complete! You can now run downloader.bat.
+echo  Setup complete! You can now run run_downloader.bat.
 echo ============================================================
 pause

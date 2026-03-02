@@ -1,5 +1,5 @@
 """
-Centralized configuration for the Enterprise Portal Report Downloader.
+Centralized configuration for the Playwright Report Downloader.
 
 Adapt these values to match your target portal, entity list, and directory layout.
 """
