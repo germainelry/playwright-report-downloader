@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Environment / secrets
+.env
+
+# Auth state (contains session cookies — never commit)
+auth_state/
+
+# Downloaded reports
+downloaded_reports/
+pickup_folder/
+
+# Logs and summaries
+logs/
+csv_summary/
+
+# Legacy output directories
+legacy_reports/
+legacy_output/
+
+# IDE / tools
+.vscode/
+.idea/
+.qodo/
+.claude/
+
+# Playwright artifacts
+trace.zip
+error_*.png
